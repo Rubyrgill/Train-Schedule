@@ -1,6 +1,16 @@
 $(document).ready(function () {
 
-    //Firebase Database
+    //GLOBAL VARIABLES
+    //------------------------
+    var trainName = "";
+    var trainDestination = "";
+    var timeInput = "";
+    var trainFrequency = "";
+    var nextArrival = "";
+    var minutesAway = "";
+
+
+    //FIREBASE DATABASE
     //------------------------
     // Initialize Firebase
     var config = {
