@@ -27,8 +27,19 @@ $(document).ready(function () {
     var database = firebase.database();
 
     database.ref().on("child_added", function (childSnap) {
+        trainName = childSnap.val().trainName;
+        trainDestination = childSnap.val().trainDestination;
+        timeInput = childSnap.val().timeInput;
+        trainFrequency = childSnap.val().trainFrequency;
 
-    })
+        $("#table-body").append(
+            "<tr><td>" + trainName + "</tr><td>" +
+            "<tr><td>" + trainDestination + "</tr><td>" +
+            "<tr><td>" + timeInput + "</tr><td>" +
+            "<tr><td>" + trainFrequency + "</tr><td>"
+        )
+    });
+
 
 
     //PROCESSES 
@@ -49,6 +60,18 @@ $(document).ready(function () {
         console.log(timeInput);
         console.log(trainFrequency);
 
+        //Creates local "temporary" object for holding data
+        var newTrain = {
+            trainName: trainName,
+            trainDestination: trainDestination,
+            timeInput: timeInput,
+            trainFrequency: trainFrequency
+        }
+
+        $("#nameInput").val("");
+        $("#destinationInput").val("");
+        $("#timeInput").val("");
+        $("#frequencyInput").val("");
     })
 
 
