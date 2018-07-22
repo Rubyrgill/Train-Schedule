@@ -34,10 +34,10 @@ $(document).ready(function () {
 
         //appends to html table
         $("#table-body").append(
-            "<tr><td>" + trainName + "</tr><td>" +
-            "<tr><td>" + trainDestination + "</tr><td>" +
-            "<tr><td>" + timeInput + "</tr><td>" +
-            "<tr><td>" + trainFrequency + "</tr><td>"
+            "<tr><td>" + trainName + "</td>" +
+            "<td>" + trainDestination + "</td>" +
+            "<td>" + timeInput + "</td>" +
+            "<td>" + trainFrequency + "<td></tr>"
         )
     });
 
