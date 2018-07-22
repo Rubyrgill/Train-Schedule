@@ -24,6 +24,24 @@ $(document).ready(function () {
 
     firebase.initializeApp(config);
 
+    var database = firebase.database();
+
+    //PROCESSES 
+    //------------------------------
+
+    //On click, storing user input value
+    $("#addTrain").on("click", function () {
+        trainName = $("#nameInput").val().trim();
+        trainDestination = $("#destinationInput").val().trim();
+        timeInput = $("#timeInput").val().trim();
+        trainFrequency = $("#frequencyInput").val().trim();
+
+        console.log(trainName);
+        console.log(trainDestination);
+        console.log(timeInput);
+        console.log(trainFrequency);
+
+    })
 
 
 });
