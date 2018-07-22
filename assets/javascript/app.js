@@ -26,16 +26,24 @@ $(document).ready(function () {
 
     var database = firebase.database();
 
+    database.ref().on("child_added", function (childSnap) {
+
+    })
+
+
     //PROCESSES 
     //------------------------------
 
     //On click, storing user input value
     $("#addTrain").on("click", function () {
+        event.preventDefault();
+
         trainName = $("#nameInput").val().trim();
         trainDestination = $("#destinationInput").val().trim();
         timeInput = $("#timeInput").val().trim();
         trainFrequency = $("#frequencyInput").val().trim();
 
+        //Testing to check value input works
         console.log(trainName);
         console.log(trainDestination);
         console.log(timeInput);
