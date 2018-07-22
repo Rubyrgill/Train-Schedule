@@ -32,6 +32,7 @@ $(document).ready(function () {
         timeInput = childSnap.val().timeInput;
         trainFrequency = childSnap.val().trainFrequency;
 
+        //appends to html table
         $("#table-body").append(
             "<tr><td>" + trainName + "</tr><td>" +
             "<tr><td>" + trainDestination + "</tr><td>" +
@@ -67,7 +68,8 @@ $(document).ready(function () {
             timeInput: timeInput,
             trainFrequency: trainFrequency
         }
-
+        database.ref().push(newTrain);
+        //clears form for next train 
         $("#nameInput").val("");
         $("#destinationInput").val("");
         $("#timeInput").val("");
