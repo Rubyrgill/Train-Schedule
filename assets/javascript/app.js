@@ -36,7 +36,6 @@ $(document).ready(function () {
         $("#table-body").append(
             "<tr><td>" + trainName + "</td>" +
             "<td>" + trainDestination + "</td>" +
-            "<td>" + timeInput + "</td>" +
             "<td>" + trainFrequency + "<td></tr>"
         )
     });
@@ -60,6 +59,17 @@ $(document).ready(function () {
         console.log(trainDestination);
         console.log(timeInput);
         console.log(trainFrequency);
+
+        //military time
+        var timeConverted = moment(timeInput, "HH:MM").subtract("1,years");
+        console.log(timeConverted)
+
+        var currentTime = moment();
+        console.log(currentTime.format("HH:MM"));
+
+
+
+
 
         //Creates local "temporary" object for holding data
         var newTrain = {
