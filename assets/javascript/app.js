@@ -6,8 +6,6 @@ $(document).ready(function () {
     var trainDestination = "";
     var timeInput = "";
     var trainFrequency = "";
-    var nextArrival = "";
-    var minutesAway = "";
 
 
     //FIREBASE DATABASE
@@ -32,11 +30,17 @@ $(document).ready(function () {
         timeInput = childSnap.val().timeInput;
         trainFrequency = childSnap.val().trainFrequency;
 
+        var minutesAway = childSnap.val().minutesAway;
+        var nextArrival = childSnap.val().nextArrival;
+
+
         //appends to html table
         $("#table-body").append(
             "<tr><td>" + trainName + "</td>" +
             "<td>" + trainDestination + "</td>" +
-            "<td>" + trainFrequency + "<td></tr>"
+            "<td>" + trainFrequency + "</td>" +
+            "<td>" + nextArrival + "</td>" +
+            "<td>" + minutesAway + "</td></tr>"
         )
     });
 
@@ -63,11 +67,21 @@ $(document).ready(function () {
         //military time
         var timeConverted = moment(timeInput, "HH:MM").subtract("1,years");
         console.log(timeConverted)
-
         var currentTime = moment();
-        console.log(currentTime.format("HH:MM"));
+        console.log("current military time:  " + currentTime.format("HH:MM"));
 
+        //Difference current time - first train
+        var diffTime = currentTime.diff(moment(timeConverted), "minutes");
+        console.log("difference:  " + diffTime)
 
+        var trainRemainder = diffTime % trainFrequency;
+        console.log(trainRemainder);
+
+        var minutesLeft = trainFrequency - trainRemainder;
+        console.log("Time Left: " + minutesLeft);
+
+        var nextTrain = moment().add(minutesLeft, "minutes").format("HH:MM a");
+        console.log("next train: " + nextTrain);
 
 
 
@@ -76,14 +90,22 @@ $(document).ready(function () {
             trainName: trainName,
             trainDestination: trainDestination,
             timeInput: timeInput,
-            trainFrequency: trainFrequency
+            trainFrequency: trainFrequency,
+            minutesAway: minutesLeft,
+            nextArrival: nextTrain
+
         }
+        console.log(newTrain)
         database.ref().push(newTrain);
+
         //clears form for next train 
         $("#nameInput").val("");
         $("#destinationInput").val("");
         $("#timeInput").val("");
         $("#frequencyInput").val("");
+
+
+        return false;
     })
 
 
