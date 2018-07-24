@@ -24,15 +24,16 @@ $(document).ready(function () {
 
     var database = firebase.database();
 
+
+    //Database value store
     database.ref().on("child_added", function (childSnap) {
         trainName = childSnap.val().trainName;
         trainDestination = childSnap.val().trainDestination;
         timeInput = childSnap.val().timeInput;
         trainFrequency = childSnap.val().trainFrequency;
-
+        //---Data calculated 
         var minutesAway = childSnap.val().minutesAway;
         var nextArrival = childSnap.val().nextArrival;
-
 
         //appends to html table
         $("#table-body").append(
@@ -93,8 +94,8 @@ $(document).ready(function () {
             trainFrequency: trainFrequency,
             minutesAway: minutesLeft,
             nextArrival: nextTrain
-
         }
+
         console.log(newTrain)
         database.ref().push(newTrain);
 
