@@ -59,6 +59,22 @@ $(document).ready(function () {
         timeInput = $("#timeInput").val().trim();
         trainFrequency = $("#frequencyInput").val().trim();
 
+        if (trainName == "") {
+            alert('Enter a train name.');
+            return false;
+        }
+        if (trainDestination == "") {
+            alert('Enter a destination.');
+            return false;
+        }
+        if (timeInput == "") {
+            alert('Enter a first train time.');
+            return false;
+        }
+        if (trainFrequency == "") {
+            alert('Enter a frequency');
+            return false;
+        }
 
         //military time
         var timeConverted = moment(timeInput, "HH:MM").subtract("1,years");
