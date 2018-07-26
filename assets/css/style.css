@@ -16,12 +16,13 @@ background-color: white;
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
-    background-image: url("https://biogenicnutrition.com/wp-content/uploads/2015/10/photodune-2487584-white-wood-background-m.jpg")
+    background-image: url("https://biogenicnutrition.com/wp-content/uploads/2015/10/photodune-2487584-white-wood-background-m.jpg");
+    font-family: 'Oswald', sans-serif;
  
 }
 
 #train-table{
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: 'Oswald', sans-serif;
     border-collapse: collapse;
     width: 100%;
 }
@@ -42,6 +43,7 @@ background-color: white;
     text-align: left;
     background-color: firebrick;
     color: white;
+    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -51,7 +53,10 @@ h2 {
      margin: 2%;
     margin-left: 15%;
     margin-right: 15%;
- 
+    font-family: 'Jockey One', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    
 }
 
 .form-container {
@@ -61,6 +66,7 @@ h2 {
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 20%;
+    font-family: 'Oswald', sans-serif;
 }
 
 
@@ -70,10 +76,15 @@ h2 {
   background: #f2f2f2;
   margin-left: 15%;
   margin-right: 15%;
+ 
 }
 
 .input-1 {
   padding: 1%;
+}
+
+.validate:hover{
+ background-color: lightyellow;
 }
 
 #addTrain {
@@ -88,3 +99,4 @@ h2 {
 #addTrain:hover {
     background: firebrick;
 }
+
