@@ -1,6 +1,6 @@
 # TRAIN SCHEDULE APPLICATION
 
-## LINK TO LIVE GAME: 
+## LINK TO LIVE GAME: https://rubyrgill.github.io/Train-Schedule/
 
 ## Application Objective: 
 ```
