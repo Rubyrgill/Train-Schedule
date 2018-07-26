@@ -1,11 +1,15 @@
 # Train-Schedule
 
-## Objective: 
+# LINK TO LIVE GAME: 
 
-Web Application using Firebase
+## Application Objective: 
 
-## instructions
-
+## Application Instructions
 
 
 ## Tools/Programs Used: 
+
+### Initial Screen - Displays already entered trains
+
+
+### 
