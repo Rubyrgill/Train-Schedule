@@ -59,30 +59,25 @@ $(document).ready(function () {
         timeInput = $("#timeInput").val().trim();
         trainFrequency = $("#frequencyInput").val().trim();
 
-        //Testing to check value input works
-        console.log(trainName);
-        console.log(trainDestination);
-        console.log(timeInput);
-        console.log(trainFrequency);
 
         //military time
         var timeConverted = moment(timeInput, "HH:MM").subtract("1,years");
         console.log(timeConverted)
         var currentTime = moment();
-        console.log("current military time:  " + currentTime.format("HH:MM"));
+
 
         //Difference current time - first train
         var diffTime = currentTime.diff(moment(timeConverted), "minutes");
-        console.log("difference:  " + diffTime)
+
 
         var trainRemainder = diffTime % trainFrequency;
-        console.log(trainRemainder);
+
 
         var minutesLeft = trainFrequency - trainRemainder;
-        console.log("Time Left: " + minutesLeft);
+
 
         var nextTrain = moment().add(minutesLeft, "minutes").format("HH:MM a");
-        console.log("next train: " + nextTrain);
+
 
 
 
@@ -96,7 +91,6 @@ $(document).ready(function () {
             nextArrival: nextTrain
         }
 
-        console.log(newTrain)
         database.ref().push(newTrain);
 
         //clears form for next train 
