@@ -1,0 +1,63 @@
+.train-info{
+    border: solid 3px blue;
+    padding: 10px;
+    margin: 20px;
+    margin: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    text-align: center;
+}
+
+#train-table{
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+#train-table td, #train-table th {
+    border: 1px solid #ddd;
+    padding: 1%;
+}
+
+#train-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#train-table tr:hover {background-color: #ddd;}
+
+#train-table th {
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+
+h2 {
+     border: solid 3px red;
+     margin: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.form-container {
+    border: solid firebrick 2px;
+    padding: 2%;
+}
+
+
+#train-form{
+  border: solid red 2px;
+  margin-left: 15%;
+  margin-right: 15%
+}
+
+.input-1 {
+  padding: 1%;
+}
+
+#addTrain {
+    background-color: #4CAF50;
+}
+
+#addTrain:hover {
+    background: black;
+}
