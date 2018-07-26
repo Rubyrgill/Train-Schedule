@@ -52,7 +52,7 @@ $(document).ready(function () {
 
     //On click, storing user input value
     $("#addTrain").on("click", function () {
-        event.preventDefault();
+
 
         trainName = $("#nameInput").val().trim();
         trainDestination = $("#destinationInput").val().trim();
