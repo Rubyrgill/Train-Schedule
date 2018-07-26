@@ -64,7 +64,7 @@ $(document).ready(function () {
         var timeConverted = moment(timeInput, "HH:MM").subtract("1,years");
         console.log(timeConverted)
         var currentTime = moment();
-
+        console.log("current military time:  " + currentTime.format("HH:MM"));
 
         //Difference current time - first train
         var diffTime = currentTime.diff(moment(timeConverted), "minutes");
@@ -79,8 +79,6 @@ $(document).ready(function () {
         var nextTrain = moment().add(minutesLeft, "minutes").format("HH:MM a");
 
 
-
-
         //Creates local "temporary" object for holding data
         var newTrain = {
             trainName: trainName,
@@ -91,6 +89,7 @@ $(document).ready(function () {
             nextArrival: nextTrain
         }
 
+        console.log(newTrain)
         database.ref().push(newTrain);
 
         //clears form for next train 
