@@ -16,7 +16,7 @@ background-color: white;
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
-    background-image: url("https://biogenicnutrition.com/wp-content/uploads/2015/10/photodune-2487584-white-wood-background-m.jpg");
+    background-image: url("../images/background.jpg");
     font-family: 'Oswald', sans-serif;
  
 }
@@ -61,7 +61,7 @@ h2 {
 
 .form-container {
     border: solid firebrick 10px;
-    background-image: url("https://biogenicnutrition.com/wp-content/uploads/2015/10/photodune-2487584-white-wood-background-m.jpg");
+    background-image: url("../images/background.jpg");
     padding: 2%;
     margin-left: 15%;
     margin-right: 15%;
