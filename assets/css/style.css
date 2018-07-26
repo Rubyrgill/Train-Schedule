@@ -1,11 +1,23 @@
+
+#container {
+background-color: white;
+   width: 100%;
+   height: 100%;
+}
+
+#pic{
+    width:100%;
+}
 .train-info{
-    border: solid 3px blue;
+    border: solid 10px firebrick;
     padding: 10px;
     margin: 20px;
     margin: 2%;
     margin-left: 15%;
     margin-right: 15%;
     text-align: center;
+    background-image: url("https://biogenicnutrition.com/wp-content/uploads/2015/10/photodune-2487584-white-wood-background-m.jpg")
+ 
 }
 
 #train-table{
@@ -16,9 +28,11 @@
 #train-table td, #train-table th {
     border: 1px solid #ddd;
     padding: 1%;
+
 }
 
-#train-table tr:nth-child(even){background-color: #f2f2f2;}
+#train-table tr{
+    background-color: #f2f2f2;}
 
 #train-table tr:hover {background-color: #ddd;}
 
@@ -26,28 +40,36 @@
     padding-top: 2%;
     padding-bottom: 2%;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: firebrick;
     color: white;
 }
 
 
 h2 {
-     border: solid 3px red;
+     border: solid 4px firebrick;
+     background:#f2f2f2; 
      margin: 2%;
     margin-left: 15%;
     margin-right: 15%;
+ 
 }
 
 .form-container {
-    border: solid firebrick 2px;
+    border: solid firebrick 10px;
+    background-image: url("https://biogenicnutrition.com/wp-content/uploads/2015/10/photodune-2487584-white-wood-background-m.jpg");
     padding: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 20%;
 }
 
 
 #train-form{
-  border: solid red 2px;
+  border: solid firebrick 5px;
+  padding: 5%;
+  background: #f2f2f2;
   margin-left: 15%;
-  margin-right: 15%
+  margin-right: 15%;
 }
 
 .input-1 {
@@ -55,9 +77,14 @@ h2 {
 }
 
 #addTrain {
-    background-color: #4CAF50;
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;;
+    background-color: lightgrey;
+    font-size: 30px;
+    border-radius: 50%;
 }
 
 #addTrain:hover {
-    background: black;
+    background: firebrick;
 }
