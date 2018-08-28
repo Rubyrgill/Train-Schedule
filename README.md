@@ -13,8 +13,8 @@
  - Firebase database 
  - Javascript (Jquery) 
  - GoogleFonts
- - Momentjs
  - HTML/CSS
+ - Momentjs
 ```
 ## Application Instructions
 
